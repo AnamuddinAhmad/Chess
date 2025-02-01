@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/chess.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/Style.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Chess Game</title>
+</head>
+
+<body class="bg-zinc-900">
+    <div class="h-screen w-full">
+        <h1 class="text-white text-2xl text-center">It's your turn</h1>
+        <div class="w-full bg-zinc-900 flex items-center justify-center mt-7">
+
+            <div class="chessboard w-96 h-96 ">
+
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"
+        integrity="sha384-mkQ3/7FUtcGyoppY6bz/PORYoGqOl7/aSUMn2ymDOJcapfS6PHqxhRTMh1RR0Q6+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"
+        integrity="sha512-xRllwz2gdZciIB+AkEbeq+gVhX8VB8XsfqeFbUh+SzHlN96dEduwtTuVuc2u9EROlmW9+yhRlxjif66ORpsgVA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/ChessGame.js"> </script>
+</body>
+
+</html>
