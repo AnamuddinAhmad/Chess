@@ -69,6 +69,25 @@ body {
   transform: rotate(180deg);
 }
 
+
+
+
+.square.highlighted {
+  background-color: rgba(0, 255, 0, 0.5); /* Example color, adjust as needed */
+}
+.square.highlighted {
+  background-color: rgba(0, 255, 0, 0.5); /* Green for highlighting */
+}
+
+
+.turn-info{
+  font-size: 3vw;
+  font-weight: 500;
+  color: wheat;
+  margin-bottom: 2vw;
+}
+
+
 /* .mb{ 
   margin-top: 5vw;
   margin-bottom: 1vw;

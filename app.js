@@ -43,7 +43,7 @@ io.on("connection", (uniqueSocket) => {
       if (chess.turn === "b" && uniqueSocket.id !== players.black) return;
       //Checking result for move
       const result = chess.move(move);
-
+      uniqueSocket.emit("route",result);
       //if result will be true;
       if (result) {
         currentPlayer = chess.turn();

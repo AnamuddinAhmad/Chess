@@ -7,6 +7,7 @@ let draggedPiece = null;
 let sourceSquare = null;
 let playerRole = null;
 
+
 //Render Board
 const renderBoard = () => {
   const board = chess.board();
@@ -31,6 +32,13 @@ const renderBoard = () => {
         );
         pieceElement.innerText = getPieceUnicode(square);
         pieceElement.draggable = playerRole === square.color;
+
+        pieceElement.addEventListener("click",(e)=>{
+          socket.on("route",(result)=>{
+            console.log(result);
+          })
+          console.log(e.target);
+        })
 
         pieceElement.addEventListener("dragstart", (e) => {
           if (pieceElement.draggable) {
@@ -64,6 +72,7 @@ const renderBoard = () => {
         }
       });
       boardElement.appendChild(squareElement);
+      
     });
   });
   if(playerRole === "b"){
@@ -111,6 +120,7 @@ const getPieceUnicode = (piece) => {
 
 socket.on("playersRole", (role) => {
   playerRole = role;
+  
   
   renderBoard();
 });
